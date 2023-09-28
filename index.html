@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Модифікувати програму інтернет-магазин.</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <div id="categories"></div>
+        <div id ="goods"></div>
+        <section class="info-form">
+                <div id ="information"></div>
+
+                <form onsubmit="checkForm(this); return false" class="form" id="form" action="#" method="post" novalidate>
+                <p>
+                    <label for="name">Введіть ПІБ:</label>
+                    <input type="text" id="name" name="name" placeholder="Артеменко Ірина Григорівна" pattern="/w+ /w+" required>
+                </p> 
+                
+                <p>
+                    <label for="city">Виберіть місто:</label>
+        
+                    <select name="cityes" id="city">
+                    <option value="">Please choose an option</option>
+                    <option value="kyiv">Київ</option>
+                    <option value="odesa">Одеса</option>
+                    <option value="lviv">Львів</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="storage">Введіть склад Нової пошти:</label>
+                    <input type="text" id="storage" name="storage" placeholder="1"> 
+                </p> 
+                
+                <p>
+                    <p>Оберіть спосіб оплати:</p>
+                    <input type="radio" id="postpaid" name="payment" value="postpaid" checked/>
+                    <label for="postpaid">Післяплата</label>
+            
+                    <input type="radio" id="card" name="payment" value="card" />
+                    <label for="card">Оплата банківською картою</label>
+                </p>
+            
+                <p>
+                    <label for="number">Введіть кількість продукції що купується:</label>
+                    <input type="text" id="number" name ="number" placeholder="2">
+                </p>
+        
+                <p>
+                    <label for="comment">Коментар до замовлення:</label>
+                    <textarea id="comment" name="comment" rows="2" cols="25"></textarea>
+                </p>
+                    
+                <p>
+                    <button class ="btn" type="submit">Відправити</button>
+                </p>
+            </form>  
+            
+            <table class="table">
+                <tbody></tbody>
+            </table> 
+
+         </section>
+    </div>
+
+    <script src="./catalog.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
